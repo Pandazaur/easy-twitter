@@ -1,10 +1,10 @@
 {
-  "name": "twitter-bot",
+  "name": "simple-twitter",
   "version": "0.0.1",
   "description": "A simple twitter module",
-  "main": "./lib",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "test/test.js"
   },
   "repository": {
     "type": "git",
