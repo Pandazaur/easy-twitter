@@ -1,5 +1,5 @@
-# node-twitter-es6
-Twitter API for Node.js / io.js written in ECMAScript 6
+# easy-twitter
+A basic Twitter API for Node.js / io.js written in ECMAScript 6
 
 ### Getting started
 When you have installed and include this twitter module, you have to create a new instance:
