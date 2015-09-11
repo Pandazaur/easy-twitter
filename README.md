@@ -1,5 +1,6 @@
 # easy-twitter
-A basic Twitter API for Node.js / io.js written in ECMAScript 6
+A basic Twitter API for Node.js / io.js written in ECMAScript 6.
+Follow, unfollow, tweet, get infos about a twitter account and more ...
 
 ### Getting started
 When you have installed and include this twitter module, you have to create a new instance:
