@@ -1,3 +1,1 @@
-module.exports = function() {
-	var twitter = require('./lib/Twitter.js');
-}
+module.exports = require('./lib/Twitter.js');
