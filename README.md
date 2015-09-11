@@ -72,8 +72,8 @@ You can follow someone with the method `follow()` with the `name` of the twitter
 
 ```javascript
 //_Both the variables are correct
-var twitterAccount = 'iAmAlphaZz'
-var secondTwitterAccount = '@iAmAlphaZz'
+var twitterAccount = 'iAmAlphaZz';
+var secondTwitterAccount = '@iAmAlphaZz';
 
 twitter.follow(twitterAccount)
     .then(function(data) {
@@ -89,8 +89,8 @@ The `unfollow()` method is used like the `follow()` method: you just have to pas
 
 ```javascript
 //_Both the variables are correct
-var twitterAccount = 'iAmAlphaZz'
-var secondTwitterAccount = '@iAmAlphaZz'
+var twitterAccount = 'iAmAlphaZz';
+var secondTwitterAccount = '@iAmAlphaZz';
 
 twitter.unfollow(twitterAccount)
     .then(function(data) {
@@ -100,3 +100,29 @@ twitter.unfollow(twitterAccount)
         console.log(err.error);
     });
 ```
+
+#### Get the followers of a twitter account
+Get the `count` (max: 200) followers list of `twitterAccount` 
+
+```javascript
+var twitterAccount = 'iAmAlphaZz';
+var count = 12;
+
+twitter.getFollowersList(twitterAccount, count)
+    .then(function(data) {
+        // data.followers : Array of the followers name ( 12 followers because count = 12)
+        // data.fullInfos : More infos below
+        // data.user : 'iAmAlphaZz' in this case
+    })
+    .catch(function(err) {
+        console.log(err.error);
+    });
+```
+
+The method `getFollowersList()` return three datas: 
+- `followers`: An array with the account names of the followers 
+- `fullInfos`: A JSON Object which contains a lot of informations. Here is a link showing the differents informations returned in this object ( look the 'Example Result' : https://dev.twitter.com/rest/reference/get/followers/list)
+- `user`: Is the user name of the twitter account you entered in parameter to the method.
+
+#### Get the followers count
+Coming soon ...
