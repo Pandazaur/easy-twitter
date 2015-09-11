@@ -5,7 +5,29 @@ Follow, unfollow, tweet, get infos about a twitter account and more ...
 ### Getting started
 When you have installed and include this twitter module, you have to create a new instance:
 
+#### Introduction
+To use this module, you need to use either:
+- Node.Js v4.0.0.
+- Io.js v3.3.0
+
+#### Installation
+
+```bash
+npm install easy-twitter --save
+```
+
+#### Launch your application
+You need to use `use_strict` parameter:
+
+```bash
+node --use_strict your-app.js
+```
+
+#### Include the module
+
 ```javascript
+var TwitterClient = require('easy-twitter');
+//_Create a new Twitter app and get the keys needed
 var twitter = new TwitterClient({consumer_key: "xxxx", 
                                  consumer_secret: "yyyy",
                                  access_token_key: "zzzz", 
