@@ -124,5 +124,41 @@ The method `getFollowersList()` return three datas:
 - `fullInfos`: A JSON Object which contains a lot of informations. Here is a link showing the differents informations returned in this object ( look the 'Example Result' : https://dev.twitter.com/rest/reference/get/followers/list)
 - `user`: Is the user name of the twitter account you entered in parameter to the method.
 
-#### Get the followers count
-Coming soon ...
+
+#### Get the friends of a twitter account
+Get the `count` (max: 200)people from the followers list of `twitterAccount`.
+Actually, it returns only the lasts. The `page` parameter will able to choose more precisely.
+
+```javascript
+var twitterAccount = 'iAmAlphaZz';
+var count = 50;
+
+twitter.getFollowersList(twitterAccount, count, page)
+    .then(function(data) {
+        // data.friends : Array of the friends name ( 50 followers because count = 50)
+        // data.fullInfos : More infos below
+        // data.user : 'iAmAlphaZz' in this case
+    })
+    .catch(function(err) {
+        console.log(err.error);
+    });
+```
+
+The method `getFollowersList()` return three datas: 
+- `followers`: An array with the account names of the followers 
+- `fullInfos`: A JSON Object which contains a lot of informations. Here is a link showing the differents informations returned in this object ( look the 'Example Result' : https://dev.twitter.com/rest/reference/get/friends/list)
+- `user`: Is the user name of the twitter account you entered in parameter to the method.
+- `page`: Is not yet implemented...
+
+#### Get the followers count & friends count 
+```javascript
+twitter.getCounts('iAmAlphaZz')
+    .then(function(data) {
+        // data.user : In this case 'iAmAlphaZz'
+        // data.followersCount : Count of people following the account in parameter
+        // data.friendsCount : count of people the twitter account in parameter is following
+    })
+    .catch(function(err) {
+        console.log(err.error);
+    })
+```
