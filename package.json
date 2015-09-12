@@ -1,15 +1,15 @@
 {
   "name": "easy-twitter",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A simple twitter module",
   "main": "index.js",
   "keywords": ["twitter", "simple", "api", "node", "easy", "easy-twitter", "pandazaur"],
   "scripts": {
-    "test": "test/test.js"
+    "test": "./test/test.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Pandazaur/node-twitter-es6.git"
+    "url": "https://github.com/Pandazaur/easy-twitter.git"
   },
   "author": "Pandazaur",
   "license": "ISC",
