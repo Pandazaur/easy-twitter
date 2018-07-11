@@ -1,9 +1,17 @@
 {
   "name": "easy-twitter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple twitter module",
   "main": "index.js",
-  "keywords": ["twitter", "simple", "api", "node", "easy", "easy-twitter", "pandazaur"],
+  "keywords": [
+    "twitter",
+    "simple",
+    "api",
+    "node",
+    "easy",
+    "easy-twitter",
+    "pandazaur"
+  ],
   "scripts": {
     "test": "node ./test/test.js"
   },
